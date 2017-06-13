@@ -16,7 +16,7 @@ driver.get('https://passport.jd.com/new/login.aspx')
     driver.findElement(webdriver.By.id('loginname')).sendKeys("18659903982");
 })
 .then(function(){
-    driver.findElement(webdriver.By.id('nloginpwd')).sendKeys("folosen$30821");
+    driver.findElement(webdriver.By.id('nloginpwd')).sendKeys("");
 })
 .then(function(){
     driver.findElement(webdriver.By.id("loginsubmit")).click();
