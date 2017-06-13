@@ -27,10 +27,15 @@ driver.get('https://passport.jd.com/new/login.aspx')
 })
 .then(function(){
     sleep(3000);
-    console.log("/////////////////");
-    driver.
-    //driver.findElement(webdriver.By.id("ttbar-login"));
+    console.log("获取句柄切换窗口");
+    driver.getAllWindowHandles().then(function(handles){
+    //这是切换到第二个tab页
+       var handles = handles;
+       driver.switchTo().window(handles[1]); 
+       driver.findElement(webdriver.By.className("alink")).click();
+    });
 })
+
 // function buildCookieMap(cookies) {
 //     var map = {};
 //     cookies.forEach(function (cookie) {
