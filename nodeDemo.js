@@ -52,7 +52,29 @@
 //   //can not catch it
 //   console.log(err);
 // }
+// var jquery = require('jquery');
 var demo = require("demo");
-console.log(demo.x);
-console.log(demo.addX(5));
+// var define = require("define")
+// exports.$ = jquery;
+// console.log(demo.area(2));
+// demo.on('ready', function() {
+//   console.log('module a is ready');
+// });
 
+// define([
+//     'demo',
+// ], function(a) {
+//     console.log(a.addX(1))
+// });
+
+// define(function (require, exports, module){
+//   var demo = require("demo");
+// //   exports.x = function (){
+// //     demo.x;
+// //   };
+//   console.log(demo.x);
+// });
+// require("demo")();
+Object.keys(require.cache).forEach(function(key) {
+  console.log(key);
+})
