@@ -53,7 +53,7 @@
 //   console.log(err);
 // }
 // var jquery = require('jquery');
-var demo = require("demo");
+// var demo = require("demo");
 // var define = require("define")
 // exports.$ = jquery;
 // console.log(demo.area(2));
@@ -75,6 +75,14 @@ var demo = require("demo");
 //   console.log(demo.x);
 // });
 // require("demo")();
-Object.keys(require.cache).forEach(function(key) {
-  console.log(key);
-})
+// Object.keys(require.cache).forEach(function(key) {
+//   console.log(key);
+// })
+// var fs = require("fs");
+// //var process = require("process");
+// fs.readFile('pixiv.txt',"utf-8",function(err,buffer){
+//   if(err) throw err;
+//   console.log(buffer);
+// })
+var path = require('path');
+console.log(path.join("index.html","foo"));
