@@ -84,5 +84,17 @@
 //   if(err) throw err;
 //   console.log(buffer);
 // })
-var path = require('path');
-console.log(path.join("index.html","foo"));
+// var path = require('path');
+// console.log=function(d){
+//     process.stdout.write(d + '\n')
+// }
+// console.log(path.join("index.html","foo"));
+// console.log(process.argv);
+// console.log(process.execPath);
+// console.log(process.execArgv);
+// console.log(process.env);
+var bytes = new Buffer(256);
+var end = bytes.slice(240, 256);
+console.log(bytes.length);
+console.log(end.length);
+console.log(end)
