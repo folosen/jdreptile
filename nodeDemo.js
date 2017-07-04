@@ -97,4 +97,35 @@
 // var end = bytes.slice(240, 256);
 // console.log(bytes.length);
 // console.log(end.length);
-// console.log(end)
+// console.log(end)；
+// var util = require('util');
+// var EventEmitter = require('events').EventEmitter;
+
+// var Radio = function (station) {
+//     var self = this;
+
+//     setTimeout(function() {
+//       self.emit('open', station);
+//     }, 0);
+//     setTimeout(function() {
+//       self.emit('close', station);
+//     }, 5000);
+
+//     this.on('newListener', function(listener) {
+//       console.log('Event Listener: ' + listener);
+//     });
+// };
+
+// util.inherits(Radio, EventEmitter);
+// var aaa = new Radio("hh");
+// aaa.emit("newListener")
+var EventEmitter = require('events').EventEmitter;
+var myEmitter = new EventEmitter;
+
+myEmitter.once('message', function(msg){
+  console.log('message: ' + msg);
+});
+
+myEmitter.emit('message', 'this is the first message');
+myEmitter.emit('message', 'this is the second message');
+myEmitter.emit('message', 'welcome to nodejs');
