@@ -93,8 +93,9 @@
 // console.log(process.execPath);
 // console.log(process.execArgv);
 // console.log(process.env);
-var bytes = new Buffer(256);
-var end = bytes.slice(240, 256);
-console.log(bytes.length);
-console.log(end.length);
-console.log(end)
+// var bytes = new Buffer(256);
+// var end = bytes.slice(240, 256);
+// console.log(bytes.length);
+// console.log(end.length);
+// console.log(end)
+
